@@ -32,7 +32,7 @@ def cli(ctx, debug, account_id, account_alias):
 @click.pass_context
 @click.option("--pattern", help="IAM role name pattern to search for")
 def iam_find_roles(ctx, pattern):
-    """IAM. Find roles by pattern in name."""
+    """IAM - Find roles by pattern in name."""
     roles = list_roles(acc=ctx.obj["ACCOUNT"], pattern=pattern)
     print(json.dumps(roles))
 
