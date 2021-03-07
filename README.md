@@ -1,9 +1,6 @@
 # README
 
-## Project-related links
-
-* [Project repository](https://github.com/saritasa-nest/saritasa-devops-tools-cli)
-* [Upsource]()
+Simple CLI tools for devops team
 
 ## Requirements
 
@@ -43,4 +40,22 @@ inv dev.requirements-install
 ```bash
 python3 -m pip install --upgrade build
 python3 -m build
+```
+
+## Test locally
+
+```bash
+git clone git@github.com:saritasa-nest/saritasa-devops-tools-cli.git
+cd /some/folder
+pip3 install /home/dmitry/Projects/_saritasa/saritasa-devops-tools-cli
+marina --account-alias=saritasa-infra-v2  iam-find-roles --pattern SSO | jq
+```
+
+Keep in mind your SHELL should have proper AWS env vars set, as we do not pass AWS secrets to marina CLI:
+
+```bash
+AWS_ACCESS_KEY_ID=YOURKEY
+AWS_SECRET_ACCESS_KEY=YOURSECRET
+AWS_DEFAULT_REGION=us-west-2
+AWS_DEFAULT_OUTPUT=table
 ```
