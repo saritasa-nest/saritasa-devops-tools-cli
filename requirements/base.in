@@ -1,0 +1,48 @@
+# AWS
+boto3
+
+# Database abstraction layer
+psycopg2-binary
+
+# Timezones and datetime utils
+pytz
+
+# redis SDK
+redis
+
+# nice string conversion procedures
+inflection
+
+# Freeze time for tests
+freezegun
+
+# ip management
+IPy
+
+# library for checking disk and memory utilization
+psutil
+
+# functional toolz
+funcy
+toolz
+more-itertools
+fn
+
+# shell
+emoji
+prompter
+pip-tools
+invoke
+click
+termcolor
+rich
+
+
+# Errors formatting
+yapf
+
+# msgpack for binary conversions of python data structures like lists into bytes
+msgpack
+
+# packets debugging
+mitmproxy

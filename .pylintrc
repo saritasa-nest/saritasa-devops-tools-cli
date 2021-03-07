@@ -1,0 +1,61 @@
+[MASTER]
+ignore=migrations,tests,testing
+
+# Enable the plugins
+load-plugins=pylint.extensions.docstyle,
+             pylint.extensions.docparams,
+
+accept-no-param-doc=no
+default-docstring-type=google
+
+[MESSAGES CONTROL]
+# W0142: *args and **kwargs support
+# W9015: "args, kwargs" missing in parameter documentation
+# C0103: Invalid constant name
+# C0111: Missing %s docstring
+# C1001: Old-style class defined
+# E1004: Missing argument to super()
+# E1101: Instance of %s has no %s member
+# R0903: Too few public methods (%s/%s)
+# W0212: Access to a protected member %s of a client class
+# W0232: Class has no __init__ method
+# R0901: Too many ancestors
+# C0199: First line empty in class docstring
+# C0103: Variable name "UserModel" doesn't conform to snake_case naming style
+# R0901: Too many ancestors (10/7)
+# I1101 Module 'pyodbc' has no 'Error' member, but source is unavailable
+# All of the error messages can find here
+# https://github.com/janjur/readable-pylint-messages
+disable:no-self-use,
+        too-few-public-methods,
+        missing-return-doc,
+        missing-return-type-doc,
+        useless-object-inheritance,
+        too-many-ancestors,
+        C0111,
+        I1101
+
+[FORMAT]
+# Maximum number of characters on a single line.
+max-line-length=100
+ignore-long-lines=<?https?://
+
+[REPORTS]
+# Set the output format. Available formats are text, parseable, colorized, msvs
+# (visual studio) and html
+output-format=parseable
+
+# Template used to display messages. This is a python new-style format string
+# used to format the message information. See doc for all details.
+msg-template='{path}:{line}: [{msg_id}({symbol}), {obj}] {msg}'
+
+# Include message's id in output
+#include-ids=yes
+
+# Tells whether to display a full report or only the messages
+reports=n
+ignored-argument-names=args|kwargs
+
+# Regular expression which should only match functions or classes name which do
+# not require a docstring
+empty-docstring-rgx=__init__|Meta|__str__|unicode

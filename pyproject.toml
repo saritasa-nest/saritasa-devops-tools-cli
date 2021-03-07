@@ -1,0 +1,23 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+    "boto3==1.17.22",
+    "emoji==1.2.0",
+    "prompter==0.3.10",
+    "invoke==1.5.0",
+    "click==7.1.2",
+    "termcolor==1.1.0",
+    "rich==9.13.0",
+    "mitmproxy==6.0.2",
+    "msgpack==1.0.2",
+    "redis==3.5.3",
+    "inflection==0.5.1",
+    "psutil==5.8.0",
+    "funcy==1.15",
+    "toolz==0.11.1",
+    "more-itertools==8.7.0",
+    "fn==0.4.3"
+
+]
+build-backend = "setuptools.build_meta"

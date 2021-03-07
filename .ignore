@@ -1,0 +1,12 @@
+.bookmarks
+TAGS
+docs/jupyter
+drop-dbscoring-data
+htmlcov/*
+logs
+media
+static
+tags
+*.js
+*.html
+qa/*

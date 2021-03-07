@@ -1,0 +1,37 @@
+# Packages used for development
+-r base.in
+
+coverage
+flake8
+pep8
+autopep8
+factory_boy
+
+# improved REPL
+ipdb
+ipython
+
+# linters
+pylama
+pylint
+pylint_django
+pylama-pylint
+pydocstyle
+pycodestyle
+eradicate
+
+# Pytest
+pytest
+pytest-cov
+
+# alternative to above would be
+# https://github.com/anapaulagomes/pytest-picked
+# we should try and see
+# TODO: Dmitry to experiment more
+# https://pypi.org/project/pytest-regtest/
+# pytest-regtest plugin provides a fixture named regtest which can be used as a file handle for recording data:
+# If you run this test script with pytest the first time there is no recorded output for this test function so far and thus the test will fail with a message including a diff
+pytest-regtest
+
+# mocking
+pytest-mock
