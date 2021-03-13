@@ -33,6 +33,8 @@ pip install -U pip pip-tools setuptools
 pip install -U click invoke pyyaml requests prompter emoji yaspin termcolor
 pip install -r requirements/development.txt
 inv dev.requirements-install
+export PYTHONPATH=`pwd`
+python3 marina/main.py --help
 ```
 
 ## Build the package

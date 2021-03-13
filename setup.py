@@ -5,7 +5,7 @@ from setuptools import find_packages, setup
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
-REQUIRES =  [
+REQUIRES = [
     "setuptools>=42",
     "wheel",
     "boto3==1.17.22",
@@ -23,12 +23,11 @@ REQUIRES =  [
     "funcy==1.15",
     "toolz==0.11.1",
     "more-itertools==8.7.0",
-    "fn==0.4.3"
-
+    "fn==0.4.3",
 ]
 
 setup(
-    name="marina", # Replace with your own username
+    name="marina",  # Replace with your own username
     version="0.0.1",
     author="Dmitry Semenov",
     author_email="dmitry@saritasa.com",
@@ -43,11 +42,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     python_requires=">=3.6",
-    entry_points={
-        "console_scripts": [
-            "marina = marina.main:cli"
-        ]
-    },
+    entry_points={"console_scripts": ["marina = marina.main:cli"]},
     classifiers=[
         "Development Status :: 5 - Production/Alpha",
         "Environment :: Console",

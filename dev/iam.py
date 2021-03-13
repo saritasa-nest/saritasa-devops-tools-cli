@@ -12,9 +12,7 @@ from . import common, docker, start, system
 # Django commands and stuff
 ##############################################################################
 
-__all__ = (
-    "find_roles",
-)
+__all__ = ("find_roles",)
 
 ##############################################################################
 # Roles
@@ -24,7 +22,5 @@ __all__ = (
 @task
 def find_roles(context, pattern=None):
     """Find roles by pattern name."""
-    roles = list_roles(
-        acc=SaritasaInfraV2(), pattern=pattern
-    )
+    roles = list_roles(acc=SaritasaInfraV2(), pattern=pattern)
     print(json.dumps(roles))
