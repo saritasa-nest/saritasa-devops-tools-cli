@@ -46,3 +46,6 @@ msgpack
 
 # packets debugging
 mitmproxy
+
+# pycrypto
+pycryptodome

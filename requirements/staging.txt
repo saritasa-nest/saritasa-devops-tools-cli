@@ -8,9 +8,9 @@ asgiref==3.3.1
     # via mitmproxy
 blinker==1.4
     # via mitmproxy
-boto3==1.17.22
+boto3==1.17.34
     # via -r requirements/base.in
-botocore==1.20.22
+botocore==1.20.34
     # via
     #   boto3
     #   s3transfer
@@ -84,7 +84,9 @@ msgpack==1.0.2
     #   mitmproxy
 passlib==1.7.4
     # via mitmproxy
-pip-tools==5.5.0
+pep517==0.10.0
+    # via pip-tools
+pip-tools==6.0.1
     # via -r requirements/base.in
 prompter==0.3.10
     # via -r requirements/base.in
@@ -102,7 +104,9 @@ pyasn1==0.4.8
     #   mitmproxy
 pycparser==2.20
     # via cffi
-pygments==2.8.0
+pycryptodome==3.10.1
+    # via -r requirements/base.in
+pygments==2.8.1
     # via rich
 pyopenssl==20.0.1
     # via mitmproxy
@@ -124,7 +128,7 @@ ruamel.yaml.clib==0.2.2
     # via ruamel.yaml
 ruamel.yaml==0.16.13
     # via mitmproxy
-s3transfer==0.3.4
+s3transfer==0.3.6
     # via boto3
 six==1.15.0
     # via
@@ -136,13 +140,15 @@ sortedcontainers==2.3.0
     # via mitmproxy
 termcolor==1.1.0
     # via -r requirements/base.in
+toml==0.10.2
+    # via pep517
 toolz==0.11.1
     # via -r requirements/base.in
 tornado==6.1
     # via mitmproxy
 typing-extensions==3.7.4.3
     # via rich
-urllib3==1.26.3
+urllib3==1.26.4
     # via botocore
 urwid==2.1.2
     # via mitmproxy
@@ -150,7 +156,7 @@ werkzeug==1.0.1
     # via flask
 wsproto==1.0.0
     # via mitmproxy
-yapf==0.30.0
+yapf==0.31.0
     # via -r requirements/base.in
 zstandard==0.14.1
     # via mitmproxy

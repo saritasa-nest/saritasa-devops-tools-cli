@@ -4,6 +4,7 @@ import click
 
 from marina.aws.iam import list_roles
 from marina.clients import get_account_class
+from marina.utils import secrets
 
 
 @click.group()
@@ -39,7 +40,10 @@ def iam_find_roles(ctx, pattern):
 
 @cli.command()
 @click.pass_context
-@click.option("--category", help="Category (worktype or framework) to get default secrets structure for")
+@click.option(
+    "--category",
+    help="Category (worktype or framework) to get default secrets structure for",
+)
 def secrets_defaults(ctx, category):
     """Secrets - Get default structure values."""
 
@@ -80,16 +84,18 @@ def secrets_defaults(ctx, category):
     defaults = {}
 
     for d in _defaults:
-        defaults[d] = { k:"set in secret manager" for k in _defaults[d] }
+        defaults[d] = {k: "set-in-secret-manager" for k in _defaults[d]}
+
+    if category == "django":
+        defaults[category]["django_secret_key"] = secrets.get_random_secret_key()
+        defaults[category]["django_secret_salt"] = secrets.get_random_string(10)
 
     if category:
         ret = defaults.get(category, {})
         print(json.dumps(ret))
     else:
         print(json.dumps(defaults))
-        
 
-    
 
 if __name__ == "__main__":
     cli(obj={})
