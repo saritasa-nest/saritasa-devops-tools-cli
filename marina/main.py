@@ -63,6 +63,7 @@ def secrets_defaults(ctx, category):
         "rds_db_user",
         "redis_host",
         "redis_port",
+        "redis_db",
         "updated",
     ]
 
