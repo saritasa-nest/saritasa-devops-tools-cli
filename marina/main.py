@@ -83,6 +83,7 @@ def secrets_defaults(ctx, category):
     }
 
     defaults = {}
+    common = {k: "set-in-secret-manager" for k in common_backend}
 
     for d in _defaults:
         defaults[d] = {k: "set-in-secret-manager" for k in _defaults[d]}
@@ -92,7 +93,7 @@ def secrets_defaults(ctx, category):
         defaults[category]["django_secret_salt"] = secrets.get_random_string(10)
 
     if category:
-        ret = defaults.get(category, {})
+        ret = defaults.get(category, common)
         print(json.dumps(ret))
     else:
         print(json.dumps(defaults))
