@@ -70,7 +70,6 @@ def secrets_defaults(ctx, category):
     _defaults = {
         "django": [
             "django_secret_key",
-            "django_secret_salt",
         ]
         + common_backend,
         "laravel": [
@@ -90,7 +89,6 @@ def secrets_defaults(ctx, category):
 
     if category == "django":
         defaults[category]["django_secret_key"] = secrets.get_random_secret_key()
-        defaults[category]["django_secret_salt"] = secrets.get_random_string(10)
 
     if category:
         ret = defaults.get(category, common)
